@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.carousel__container {
+  white-space: nowrap;
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+
+.carousel-item {
+  background-color: cadetblue;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  transform-origin: center left;
+  position: relative;
+}
+
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+.carousel__container .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-item__details {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  font-size: 10px;
+  opacity: 0;
+  transition: 0.3s opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  color: white;
+}
+.carousel-item__details .icon,
+svg.one,
+svg.two {
+  bottom: 50px;
+  position: absolute;
+  color: #14f6af;
+}
+
+svg.two {
+  left: 35px;
+}
+
+.carousel-item__details .carousel-item__details--title {
+  position: absolute;
+  bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.carousel-item__details .carousel-item__details--subtitle {
+  padding-bottom: 5px;
+}
+.carousel-item:hover .carousel-item__details {
+  opacity: 1;
+}

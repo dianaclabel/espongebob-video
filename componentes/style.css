@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23cdf2f7' fill-opacity='0.09' fill-rule='evenodd'/%3E%3C/svg%3E"),
+    linear-gradient(312deg, rgba(29, 33, 154, 1) 7%, rgba(24, 233, 201, 1) 90%);
+  font-family: "Mulish", sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+.header__img {
+  width: 250px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+  margin: 0 -10px 0;
+}
+/*cuando yo haga hover todas las ul(.header__menu:hover),luesgo las ul debn tener un display block*/
+.header__menu:hover ul,
+ul:hover {
+  display: block;
+}
+
+.header__menu li {
+  margin: 10px 0px;
+}
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+.header__menu--profile {
+  margin-right: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.header__menu--profile img {
+  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.header__menu--profile p {
+  margin: 0px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.main__img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+}
+.main__title {
+  color: white;
+  font-size: 25px;
+  padding: 20px;
+  padding-top: 0px;
+}
+.main__buscador {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.main__buscador .main__buscador--icon {
+  position: absolute;
+  right: calc(30% - 60px);
+  top: 10px;
+  color: white;
+}
+
+.input {
+  /*se agrego opacidad al background del input*/
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  height: 50px;
+  padding: 0px 20px;
+  width: 50%;
+}
+/*se cambio el color del texto  del input (placheholder)*/
+.input::placeholder {
+  color: white;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.categories__title {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100%;
+  margin-top: 13px;
+}
+.carousel {
+  width: 100%;
+  overflow-x: scroll;
+  padding: 30px;
+  position: relative;
+}
+.carousel::-webkit-scrollbar {
+  height: 10px;
+}
+.carousel::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+.carousel::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+
+/*whitw-space:nowrap no nos permite acomodar los elementos debajo del otro*/
+.carousel__container {
+  white-space: nowrap;
+  margin: 70px 0px 30px;
+}
+/*transform-origin nos permite posicionar aquellos elementos que utilizaron transform*/
+.carousel-item {
+  background-color: cadetblue;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  transform-origin: center left;
+  position: relative;
+}
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* cuando hagamos hover o pasemos el mouse por carousel item se van a desplazar a la derecha 100pxel resto de los carousel item, traslate3d(x,y,z)*/
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+.carousel__container .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-item__details {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  font-size: 10px;
+  opacity: 0;
+  transition: 0.3s opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  color: white;
+}
+.carousel-item__details .icon,
+svg.one,
+svg.two {
+  bottom: 50px;
+  position: absolute;
+  color: #14f6af;
+}
+
+svg.two {
+  left: 35px;
+}
+
+.carousel-item__details .carousel-item__details--title {
+  position: absolute;
+  bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.carousel-item__details .carousel-item__details--subtitle {
+  padding-bottom: 5px;
+}
+.carousel-item:hover .carousel-item__details {
+  opacity: 1;
+}
